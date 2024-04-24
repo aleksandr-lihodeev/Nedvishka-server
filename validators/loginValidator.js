@@ -10,3 +10,5 @@ export const loginValidator = [
         .isLength({ min: 7, max: 15 })
         .withMessage("Password must be between 7 and 15 symbols"),
 ];
+
+///test
