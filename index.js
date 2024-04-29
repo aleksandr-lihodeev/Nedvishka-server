@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoutes from "./routes/authRoutes.js";
+import cardRoutes from "./routes/cardRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -11,12 +12,14 @@ const corsOptions = {
     origin: "http://localhost:3000",
     optionsSuccessStatus: 200,
     // origin:process.env.FRONTEND_HOST
+    // origin:process.env.FRONTEND_HOST
 };
 
 app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/auth", authRoutes);
+app.use("/cards", cardRoutes);
 
 
 mongoose
