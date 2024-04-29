@@ -43,7 +43,7 @@ const CardSchema = new Schema({
     },
     TagCoordination: {
         type: String,
-        required: true,
+        // required: true,
     },
     TelNumber: {
         type: String,
@@ -66,7 +66,7 @@ const CardSchema = new Schema({
         required: true,
     },
     Upload: {
-        type: String,
+        type: [Object],
         required: true,
     },
     additionTelNumber: {
@@ -85,5 +85,6 @@ const CardSchema = new Schema({
         type: String,
         required: true,
     },
+
 });
 export default model("Card", CardSchema);
