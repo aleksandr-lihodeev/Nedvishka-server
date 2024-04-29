@@ -10,7 +10,7 @@ const CardSchema = new Schema({
         required: true,
     },
     Floor: {
-        type: Number,
+        type: String,
         required: true,
     },
     Payment: {

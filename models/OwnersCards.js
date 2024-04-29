@@ -21,10 +21,6 @@ const OwnersCards = new Schema({
             },
         },
     ],
-    grandTotal: {
-        type: Number,
-        default: 0,
-    },
 });
 
 export default model("OwnersCards",OwnersCards );

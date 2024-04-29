@@ -10,7 +10,7 @@ const router = express.Router();
 router.get("/get", getCardController);
 router.get("/getOwners",verifyToken, getOwnersCardsController);
 router.post('/post',verifyToken,addCardController)
-router.delete('/delete',verifyToken,deleteCardController)
+router.delete('/delete:id',verifyToken,deleteCardController)
 
 
 export default router;

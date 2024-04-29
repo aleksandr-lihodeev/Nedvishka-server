@@ -5,7 +5,7 @@ import { countGrandTotal } from "../../helpers/helpers.js";
 export const addCardController = async (req, res) => {
     try {
         const { userId } = req.user;
-
+        const {typeOfDeal, TipNedvishki, Rooms, PloshadM2, Floor, TotalFloor, ownerName, TelNumber, additionTelNumber, Districts, StreetAround, Sostoyanie, Documents, communication, TypeOffer, furniture, Payment, StatusObject, Texteditor, PriceForm, PriceOnHands, Upload} = req.body
         let card = await Card.findOne(req.body);
         if (!card) {
             card = await Card.create(req.body);
@@ -32,11 +32,8 @@ export const addCardController = async (req, res) => {
                     quantity: 1,
                     total: card.price
                 }],
-                grandTotal: card.price,
             });
         }
-
-        ownersCart.grandTotal = countGrandTotal(ownersCart.items, "total");
 
         await ownersCart.save();
 
