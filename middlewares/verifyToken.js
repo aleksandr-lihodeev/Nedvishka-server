@@ -6,10 +6,9 @@ export const verifyToken = async (req, res, next) => {
         return res.status(403).send("Authorization header is missing");
 
     const token = authHeader.replace("Bearer ", "");
-
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        console.log(decoded);
+        console.log(decoded , "dsfgs");
         req.user = decoded;
         return next();
     } catch (e) {

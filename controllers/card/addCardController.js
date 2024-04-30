@@ -10,7 +10,6 @@ export const addCardController = async (req, res) => {
         if (!card) {
             card = await Card.create(req.body);
         }
-
         const existingCard = await OwnersCards.findOne({ userId, "items.product": card._id });
         if (existingCard) {
             return res.status(400).send({ message: "Product already exists in cart" });
