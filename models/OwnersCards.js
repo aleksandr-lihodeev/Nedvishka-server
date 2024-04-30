@@ -7,8 +7,10 @@ const OwnersCards = new Schema({
     },
     items: [
         {
+            product: {
                 type: Schema.Types.ObjectId,
-                ref: "Card",       
+                ref: "Card",
+            }
         },
     ],
 });
