@@ -1,6 +1,5 @@
 import Card from "../../models/Card.js";
 import OwnersCards from "../../models/OwnersCards.js";
-import { countGrandTotal } from "../../helpers/helpers.js";
 
 export const addCardController = async (req, res) => {
     try {
@@ -20,16 +19,12 @@ export const addCardController = async (req, res) => {
         if (ownersCart) {
             ownersCart.items.push({
                 product: card._id,
-                quantity: 1,
-                total: card.price
             });
         } else {
             ownersCart = new OwnersCards({
                 userId,
                 items: [{
                     product: card._id,
-                    quantity: 1,
-                    total: card.price
                 }],
             });
         }
