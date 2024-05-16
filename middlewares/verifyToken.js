@@ -8,7 +8,6 @@ export const verifyToken = async (req, res, next) => {
     const token = authHeader.replace("Bearer ", "");
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        console.log(decoded , "dsfgs");
         req.user = decoded;
         return next();
     } catch (e) {
