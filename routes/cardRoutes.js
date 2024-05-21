@@ -12,5 +12,4 @@ router.get("/getOwners",verifyToken, getOwnersCardsController);
 router.post('/post',verifyToken,addCardController)
 router.delete("/delete/:id",verifyToken,deleteCardController)
 
-
 export default router;
