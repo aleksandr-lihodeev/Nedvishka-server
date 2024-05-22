@@ -33,6 +33,10 @@ const CardSchema = new Schema({
         type: String,
         required: true,
     },
+    Rooms: {
+        type: String,
+        required: true,
+    },
     StatusObject: {
         type: String,
         required: true,
