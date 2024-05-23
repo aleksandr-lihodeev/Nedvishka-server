@@ -11,7 +11,6 @@ const port = process.env.PORT || 5050;
 const corsOptions = {
   origin: process.env.FRONTEND_HOST,
   optionsSuccessStatus: 200,
-//   origin:process.env.FRONTEND_HOST
 };
 
 app.use(cors(corsOptions));
