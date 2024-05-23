@@ -4,7 +4,6 @@ import OwnersCards from "../../models/OwnersCards.js";
 export const addCardController = async (req, res) => {
    console.log(req.body , "addCardController");
     try {
-       
         const { userId } = req.user;
         let card = await Card.findOne(req.body);
         if (!card) {
