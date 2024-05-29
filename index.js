@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoutes from "./routes/authRoutes.js";
 import cardRoutes from "./routes/cardRoutes.js";
-
+import favoriteRoutes from "./routes/favoriteRoutes.js"
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 5050;
@@ -18,6 +18,7 @@ app.use(express.json({ limit: "20mb" }));
 
 app.use("/auth", authRoutes);
 app.use("/cards", cardRoutes);
+app.use("/favorite" ,favoriteRoutes)
 
 mongoose
   .connect(process.env.DATABASE_URL)
