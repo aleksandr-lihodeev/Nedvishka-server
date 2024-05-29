@@ -9,6 +9,6 @@ export const cardDetailController = async (req, res) => {
       res.status(200).send(idProduct);
     }
   } catch (e) {
-    res.status(500).send({ message: error.message });
+    res.status(500).send({ message: e.message });
   }
 };
