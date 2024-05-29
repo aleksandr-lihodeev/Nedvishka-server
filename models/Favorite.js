@@ -6,9 +6,9 @@ const FavoriteSchema = new Schema({
     require: true,
   },
   favoriteItems: [
-    { 
-        type: Schema.Types.ObjectId,
-        ref: "Card",
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Card",
     },
   ],
 });
