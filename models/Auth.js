@@ -18,6 +18,10 @@ const AuthSchema = new Schema({
     image:{
         type:String,
         required: false
+      },
+    telephoneNumber:{
+        type:String,
+        required: false
       }
 });
 export default model("Auth", AuthSchema);

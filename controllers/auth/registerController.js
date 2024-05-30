@@ -7,7 +7,7 @@ dotenv.config();
 
 export const registerController = async (req, res) => {
     try {
-        const { name, email, password } = req.body;
+        const { name, email, password ,telephoneNumber} = req.body;
         const findUser = await Auth.findOne({ email });
         if (findUser)
             return res.status(401).send({ message: "User already exists" });
@@ -16,6 +16,7 @@ export const registerController = async (req, res) => {
             name,
             email,
             hash_pass,
+            telephoneNumber,
         });
 
         const token = jwt.sign(
