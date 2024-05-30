@@ -5,6 +5,10 @@ const CardSchema = new Schema({
     type: [String],
     required: true,
   },
+  Complex: {
+    type: [String],
+    required: true,
+  },
   Documents: {
     type: String,
     required: true,
