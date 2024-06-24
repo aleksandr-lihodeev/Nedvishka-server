@@ -5,7 +5,7 @@ export const registerValidator = [
         .notEmpty()
         .withMessage("Name is required")
         .isLength({ min: 3 })
-        .withMessage("Minimum 5 symbols are required")
+        .withMessage("Minimum 3 symbols are required")
         .isLength({ max: 20 })
         .withMessage("Maximum 20 symbols are required")
         .matches(/^[a-z]+$/)
