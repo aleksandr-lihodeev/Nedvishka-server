@@ -10,7 +10,7 @@ const CardSchema = new Schema({
     required: true,
   },
   Documents: {
-    type: String,
+    type: [String],
     required: true,
   },
   Floor: {
@@ -79,7 +79,7 @@ const CardSchema = new Schema({
   },
   additionTelNumber: {
     type: String,
-    required: true,
+    required: false,
   },
   communication: {
     type: [String],
@@ -97,5 +97,6 @@ const CardSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Auth",
   },
-});
+},
+  {timestamps: true})
 export default model("Card", CardSchema);

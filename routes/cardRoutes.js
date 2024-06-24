@@ -5,6 +5,7 @@ import {deleteCardController} from "../controllers/card/deleteCardController.js"
 import {verifyToken} from "../middlewares/verifyToken.js";
 import {getOwnersCardsController} from "../controllers/card/getOwnersCardsController.js";
 import { cardDetailController } from "../controllers/card/cardDetailController.js";
+import Card from "../models/Card.js";
 const router = express.Router();
 
 router.get("/get", getCardController);
